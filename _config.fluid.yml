@@ -912,7 +912,7 @@ page404:
 #---------------------------
 links:
   enable: true
-  banner_img: /img/default.png
+  banner_img: /img/link.jpg
   banner_img_height: 60
   banner_mask_alpha: 0.3
   subtitle:
@@ -920,22 +920,40 @@ links:
   # Member item of page
   items:
     - {
-      title: "Fluid Blog",
-      intro: "主题博客",
-      link: "https://hexo.fluid-dev.com/",
-      avatar: "/img/favicon.png"
+      title: "WeiCN",
+      intro: "浅秋枫影的博客",
+      link: "https://cuojue.org/",
+      avatar: "https://dn-qiniu-avatar.qbox.me/avatar/b81741f1a25b57a016e223fe13f905b4?s=64&r=G&d="
     }
     - {
-      title: "Fluid Docs",
-      intro: "主题使用指南",
-      link: "https://hexo.fluid-dev.com/docs/",
-      avatar: "/img/favicon.png"
+      title: "计算姬",
+      intro: "一个模仿Win的博客",
+      link: "https://taoxinhao.cn/",
+      avatar: "https://thirdqq.qlogo.cn/g?b=sdk&k=AwnNiaiclI6t8dX8ULO7nibjQ&s=100&t=1573693120"
     }
     - {
-      title: "Fluid Repo",
-      intro: "主题 GitHub 仓库",
-      link: "https://github.com/fluid-dev/hexo-theme-fluid",
-      avatar: "/img/favicon.png"
+      title: "惜城",
+      intro: "智障的博客",
+      link: "https://blog.mofnr.cn/",
+      avatar: "https://q.qlogo.cn/g?b=qq&nk=81949010&refer=web1n&s=100"
+    }
+    - {
+      title: "Rat's Blog",
+      intro: "一个技术博客",
+      link: "https://www.moerats.com/",
+      avatar: "https://q.qlogo.cn/g?b=qq&nk=81949010&refer=web1n&s=100"
+    }
+    - {
+      title: "左岸博客",
+      intro: "失踪人口的博客",
+      link: "https://www.zrahh.com/",
+      avatar: "https://www.zrahh.com/img/avatar.jpg"
+    }
+    - {
+      title: "熊猫小A",
+      intro: "VOID主题大佬",
+      link: "https://www.xxhat.xyz/go/SHJhbg==",
+      avatar: "https://blog.imalan.cn/logo.jpg"
     }
 
   # 当成员头像加载失败时，替换为指定图片
