@@ -196,6 +196,11 @@
             
               <div class="mt-3">
   
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-author" aria-hidden="true"></i>
+      xxhat
+    </span>
+  
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
@@ -225,6 +230,14 @@
 
   
   
+    
+      <!-- 不蒜子统计文章PV -->
+      <span id="busuanzi_container_page_pv" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="busuanzi_value_page_pv"></span> 次
+      </span>
+    
+  
 </div>
 
             
@@ -249,6 +262,12 @@
           <article class="post-content mx-auto">
             <!-- SEO header -->
             <h1 style="display: none">发现了个好玩的东西，先保存博客</h1>
+            
+              <p class="note note-info">
+                
+                  本文最后更新于：2 小时前
+                
+              </p>
             
             <div class="markdown-body">
               <figure class="highlight javascript"><table><tr><td class="gutter"><div class="code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></div></td><td class="code"><pre><code class="hljs javascript">    /COOKIE功能检查<br>    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">fCheckCookie</span>(<span class="hljs-params"></span>)</span>&#123;<br>    <span class="hljs-keyword">if</span>(!navigator.cookieEnabled)&#123;<br>        alert(<span class="hljs-string">&quot;您好，您的浏览器设置禁止使用cookie\n请设置您的浏览器，启用cookie功能，再重新登录。&quot;</span>);<br>    &#125;<br>&#125;<br><br>    <span class="hljs-comment">//获取Cookie</span><br>    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">fGetCookie</span>(<span class="hljs-params">sName</span>)</span>&#123;<br>       <span class="hljs-keyword">var</span> sSearch = sName + <span class="hljs-string">&quot;=&quot;</span>;<br>       <span class="hljs-keyword">if</span>(<span class="hljs-built_in">document</span>.cookie.length &gt; <span class="hljs-number">0</span>)&#123;<br>          offset = <span class="hljs-built_in">document</span>.cookie.indexOf(sSearch)<br>          <span class="hljs-keyword">if</span>(offset != -<span class="hljs-number">1</span>)&#123;<br>             offset += sSearch.length;<br>             end = <span class="hljs-built_in">document</span>.cookie.indexOf(<span class="hljs-string">&quot;;&quot;</span>, offset)<br>             <span class="hljs-keyword">if</span>(end == -<span class="hljs-number">1</span>) end = <span class="hljs-built_in">document</span>.cookie.length;<br>             <span class="hljs-keyword">return</span> <span class="hljs-built_in">unescape</span>(<span class="hljs-built_in">document</span>.cookie.substring(offset, end))<br>          &#125;<br>          <span class="hljs-keyword">else</span> <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;&quot;</span><br>       &#125;<br>    &#125;<br><br><span class="hljs-comment">//设置Cookie</span><br><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">fSetCookie</span>(<span class="hljs-params">name, value, isForever, domain</span>)</span>&#123;<br>    <span class="hljs-keyword">var</span> sDomain = <span class="hljs-string">&quot;;domain=&quot;</span> + (domain  gOption[<span class="hljs-string">&quot;sCookieDomain&quot;</span>] );<br>    <span class="hljs-built_in">document</span>.cookie = name + <span class="hljs-string">&quot;=&quot;</span> + <span class="hljs-built_in">escape</span>(value) + sDomain + (isForever?<span class="hljs-string">&quot;;expires=&quot;</span>+  (<span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(<span class="hljs-number">2099</span>,<span class="hljs-number">12</span>,<span class="hljs-number">31</span>)).toGMTString():<span class="hljs-string">&quot;&quot;</span>);<br>&#125;<br><br> <br><br>/跨域调用方法<br><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">fGetScript</span>(<span class="hljs-params">sUrl</span>)</span>&#123;<br>    <span class="hljs-keyword">var</span> oScript = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">&quot;script&quot;</span>);<br>    oScript.setAttribute(<span class="hljs-string">&quot;type&quot;</span>, <span class="hljs-string">&quot;text/javascript&quot;</span>);<br>    oScript.setAttribute(<span class="hljs-string">&quot;src&quot;</span>, sUrl);<br>    <span class="hljs-keyword">try</span>&#123;oScript.setAttribute(<span class="hljs-string">&quot;defer&quot;</span>, <span class="hljs-string">&quot;defer&quot;</span>);&#125;<span class="hljs-keyword">catch</span>(e)&#123;&#125;<br>    <span class="hljs-built_in">window</span>.document.body.appendChild(oScript);<br></code></pre></td></tr></table></figure>
@@ -397,6 +416,30 @@
      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
   </div>
   
+  <div class="statistics">
+    
+    
+
+    
+      
+        <!-- 不蒜子统计PV -->
+        <span id="busuanzi_container_site_pv" style="display: none">
+            总访问量 
+            <span id="busuanzi_value_site_pv"></span>
+             次
+          </span>
+      
+      
+        <!-- 不蒜子统计UV -->
+        <span id="busuanzi_container_site_uv" style="display: none">
+            总访客数 
+            <span id="busuanzi_value_site_uv"></span>
+             人
+          </span>
+      
+    
+  </div>
+
 
   
 
@@ -454,6 +497,8 @@
   
 
 
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
 
 
 

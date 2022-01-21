@@ -11,6 +11,7 @@
 #---------------------------
 
 
+
 #---------------------------
 # 全局
 # Global
@@ -303,7 +304,7 @@ navbar:
   # 导航栏毛玻璃特效，实验性功能，可能会造成页面滚动掉帧和抖动，部分浏览器不支持会自动不生效
   # Navigation bar frosted glass special animation. It is an experimental feature
   ground_glass:
-    enable: false
+    enable: true
 
     # 模糊像素，只能为数字，数字越大模糊度越高
     # Number of blurred pixel. the larger the number, the higher the blur
@@ -322,7 +323,7 @@ navbar:
     - { key: "category", link: "/categories/", icon: "iconfont icon-category-fill" }
     - { key: "tag", link: "/tags/", icon: "iconfont icon-tags-fill" }
     - { key: "about", link: "/about/", icon: "iconfont icon-user-fill" }
-    #- { key: "links", link: "/links/", icon: "iconfont icon-link-fill" }
+    - { key: "links", link: "/links/", icon: "iconfont icon-link-fill" }
 
 # 搜索功能，基于 hexo-generator-search 插件，若已安装其他搜索插件请关闭此功能，以避免生成多余的索引文件
 # Search feature, based on hexo-generator-search. If you have installed other search plugins, please disable this feature to avoid generating redundant index files
@@ -404,7 +405,7 @@ footer:
   # 展示网站的 PV、UV 统计数
   # Display website PV and UV statistics
   statistics:
-    enable: false
+    enable: true
 
     # 统计数据来源，使用 leancloud 需要设置 `web_analytics: leancloud` 中的参数；使用 busuanzi 不需要额外设置，但是有时不稳定，另外本地运行时 busuanzi 显示统计数据很大属于正常现象，部署后会正常
     # Data source. If use leancloud, you need to set the parameter in `web_analytics: leancloud`
@@ -523,7 +524,7 @@ post:
     # 作者，优先根据 front-matter 里 author 字段，其次是 hexo 配置中 author 值
     # Author, based on `author` field in front-matter, if not set, based on `author` value in hexo config
     author:
-      enable: false
+      enable: true
 
     # 文章日期，优先根据 front-matter 里 date 字段，其次是 md 文件日期
     # Post date, based on `date` field in front-matter, if not set, based on create date of .md file
@@ -557,7 +558,7 @@ post:
     # 浏览量计数
     # Number of visits
     views:
-      enable: false
+      enable: true
       # 统计数据来源
       # Data Source
       # Options: busuanzi | leancloud
@@ -567,7 +568,7 @@ post:
   # 在文章开头显示文章更新时间，该时间默认是 md 文件更新时间，可通过 front-matter 中 `updated` 手动指定（和 date 一样格式）
   # Update date is displayed at the beginning of the post. The default date is the update date of the md file, which can be manually specified by `updated` in front-matter (same format as date)
   updated:
-    enable: false
+    enable: true
 
     # 描述文字
     # Descriptive text before date
@@ -575,7 +576,7 @@ post:
 
     # 是否使用相对时间表示，比如："3 天前"
     # If true, it will be a relative time, such as: "3 days ago"
-    relative: false
+    relative: true
 
   # 文章右侧目录
   # Table of contents (TOC)
@@ -865,7 +866,7 @@ tag:
 #---------------------------
 about:
   enable: true
-  banner_img: /img/0G520141A4.jpg
+  banner_img: /img/ivsky.jpg
   banner_img_height: 50
   banner_mask_alpha: 0.3
   subtitle:
@@ -899,10 +900,10 @@ page:
 #---------------------------
 page404:
   enable: true
-  banner_img: /img/default.png
+  banner_img: /img/404.jpg
   banner_img_height: 85
   banner_mask_alpha: 0.3
-  subtitle: "Page not found"
+  subtitle: "该页面不存在"
 
 
 #---------------------------
@@ -911,7 +912,7 @@ page404:
 #---------------------------
 links:
   enable: true
-  banner_img: /img/default.png
+  banner_img: /img/link.jpg
   banner_img_height: 60
   banner_mask_alpha: 0.3
   subtitle:
@@ -919,22 +920,40 @@ links:
   # Member item of page
   items:
     - {
-      title: "Fluid Blog",
-      intro: "主题博客",
-      link: "https://hexo.fluid-dev.com/",
-      avatar: "/img/favicon.png"
+      title: "WeiCN",
+      intro: "浅秋枫影的博客",
+      link: "https://cuojue.org/",
+      avatar: "https://dn-qiniu-avatar.qbox.me/avatar/b81741f1a25b57a016e223fe13f905b4?s=64&r=G&d="
     }
     - {
-      title: "Fluid Docs",
-      intro: "主题使用指南",
-      link: "https://hexo.fluid-dev.com/docs/",
-      avatar: "/img/favicon.png"
+      title: "计算姬",
+      intro: "一个模仿Win的博客",
+      link: "https://taoxinhao.cn/",
+      avatar: "https://thirdqq.qlogo.cn/g?b=sdk&k=AwnNiaiclI6t8dX8ULO7nibjQ&s=100&t=1573693120"
     }
     - {
-      title: "Fluid Repo",
-      intro: "主题 GitHub 仓库",
-      link: "https://github.com/fluid-dev/hexo-theme-fluid",
-      avatar: "/img/favicon.png"
+      title: "惜城",
+      intro: "智障的博客",
+      link: "https://blog.mofnr.cn/",
+      avatar: "https://q.qlogo.cn/g?b=qq&nk=81949010&refer=web1n&s=100"
+    }
+    - {
+      title: "Rat's Blog",
+      intro: "一个技术博客",
+      link: "https://www.moerats.com/",
+      avatar: "https://q.qlogo.cn/g?b=qq&nk=81949010&refer=web1n&s=100"
+    }
+    - {
+      title: "左岸博客",
+      intro: "失踪人口的博客",
+      link: "https://www.zrahh.com/",
+      avatar: "https://www.zrahh.com/img/avatar.jpg"
+    }
+    - {
+      title: "熊猫小A",
+      intro: "VOID主题大佬",
+      link: "https://www.xxhat.xyz/go/SHJhbg==",
+      avatar: "https://blog.imalan.cn/logo.jpg"
     }
 
   # 当成员头像加载失败时，替换为指定图片
