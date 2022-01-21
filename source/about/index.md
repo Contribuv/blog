@@ -1,12 +1,6 @@
 ---
-title:
-  '[object Object]': null
-date:
-  '[object Object]': null
-id: '7'
-tags: []
-categories:
-  - - uncategorized
+title: 标题
+layout: about
 ---
 
 ## 我
