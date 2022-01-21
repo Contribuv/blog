@@ -900,10 +900,10 @@ page:
 #---------------------------
 page404:
   enable: true
-  banner_img: /img/default.png
+  banner_img: /img/404.jpg
   banner_img_height: 85
   banner_mask_alpha: 0.3
-  subtitle: "Page not found"
+  subtitle: "该页面不存在"
 
 
 #---------------------------
