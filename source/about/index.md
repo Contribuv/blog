@@ -1,0 +1,40 @@
+---
+title:
+  '[object Object]': null
+date:
+  '[object Object]': null
+id: '7'
+tags: []
+categories:
+  - - uncategorized
+---
+
+## 我
+
+* * *
+
+我是谁 --- 来自沙田的一个沙雕青年！
+
+喜欢旅行，DIY，编程，写小说，读书，烘培制作。
+
+## 
+
+* * *
+
+## 
+
+## 博客大事件
+
+  
+
+* * *
+
+  
+
+*   2008年3月10日 在域名aorilly#cn上发布了第一篇博文Hello World！
+*   2010年5月 注册域名liu-hao#cn部署了采用ASP自写博客
+*   2011年6月将自写博客转换为Jblog（基于.NET）
+*   2015年12月博客停止更新
+*   2019年11月11日 更换域名 cat-ss#win 建立了免流社区
+*   2020年2月9日关闭社区，从新开通博客xxhat.xyzfkun.me(已失效)fkun.me(已失效)
+*   至今
