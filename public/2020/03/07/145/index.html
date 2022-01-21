@@ -1,0 +1,537 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="xxhat">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="此插件原作者 https:&#x2F;&#x2F;cuojue.org&#x2F;read&#x2F;typecho-fastcgi_cache.html  为了让接下来的步骤简洁，推荐使用宝塔面板（因已内置 Ngx_cache_purge 模块） 插件特性直接在nginx层缓存，媲美静态页面速度 php请安装7.4 版本  支持所有页面缓存 支持内容修改之后自动更新内容、分类、首页缓存 支持评论生效更新缓存 支持登录状态下不缓存 支持">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Typecho配置Fastcgi_Cache缓存，如静态一般丝滑">
+<meta property="og:url" content="http://yoursite.com/2020/03/07/145/index.html">
+<meta property="og:site_name" content="晓新哈特">
+<meta property="og:description" content="此插件原作者 https:&#x2F;&#x2F;cuojue.org&#x2F;read&#x2F;typecho-fastcgi_cache.html  为了让接下来的步骤简洁，推荐使用宝塔面板（因已内置 Ngx_cache_purge 模块） 插件特性直接在nginx层缓存，媲美静态页面速度 php请安装7.4 版本  支持所有页面缓存 支持内容修改之后自动更新内容、分类、首页缓存 支持评论生效更新缓存 支持登录状态下不缓存 支持">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://www.xxhat.xyz/usr/uploads/2020/03/4193180040.png#mirages-width=1400&mirages-height=1311&mirages-cdn-type=3">
+<meta property="og:image" content="https://www.xxhat.xyz/usr/uploads/2020/03/632267431.png#mirages-width=1155&mirages-height=1039&mirages-cdn-type=3">
+<meta property="article:published_time" content="2020-03-06T21:33:00.000Z">
+<meta property="article:modified_time" content="2022-01-21T18:25:43.645Z">
+<meta property="article:author" content="xxhat">
+<meta property="article:tag" content="Fastcgi_Cache">
+<meta property="article:tag" content="Typecho">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://www.xxhat.xyz/usr/uploads/2020/03/4193180040.png#mirages-width=1400&mirages-height=1311&mirages-cdn-type=3">
+  
+  
+  <title>Typecho配置Fastcgi_Cache缓存，如静态一般丝滑 - 晓新哈特</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4/github-markdown.min.css" />
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hint.css@2/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.css" />
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"yoursite.com","root":"/","version":"1.8.14","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 35vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>晓新哈特</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="Typecho配置Fastcgi_Cache缓存，如静态一般丝滑">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2020-03-07 05:33" pubdate>
+        2020年3月7日 凌晨
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      2.5k 字
+    </span>
+  
+
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      21 分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">Typecho配置Fastcgi_Cache缓存，如静态一般丝滑</h1>
+            
+            <div class="markdown-body">
+              <p>此插件原作者 <a target="_blank" rel="noopener" href="https://cuojue.org/read/typecho-fastcgi_cache.html">https://cuojue.org/read/typecho-fastcgi_cache.html</a></p>
+<hr>
+<p>为了让接下来的步骤简洁，推荐使用宝塔面板（因已内置 Ngx_cache_purge 模块）</p>
+<p>插件特性直接在nginx层缓存，媲美静态页面速度</p>
+<p>php请安装7.4 版本</p>
+<hr>
+<p>支持所有页面缓存</p>
+<p>支持内容修改之后自动更新内容、分类、首页缓存</p>
+<p>支持评论生效更新缓存</p>
+<p>支持登录状态下不缓存</p>
+<p>支持搜索等动态页面不缓存</p>
+<hr>
+<p>更新日志</p>
+<hr>
+<p>v1.0 初始版本</p>
+<p>已知问题</p>
+<p>非js方式的访问统计插件会失效</p>
+<hr>
+<p>使用方法</p>
+<hr>
+<p>步骤一：需要修改/www/server/nginx/conf/nginx.conf配置文件</p>
+<p>将下列代码，添加到 Nginx.conf 文件的 server 字段上方即可</p>
+<hr>
+<figure class="highlight routeros"><table><tr><td class="gutter"><div class="code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></div></td><td class="code"><pre><code class="hljs routeros">fastcgi_cache_path /www/server/nginx/fastcgi_cache_dir <span class="hljs-attribute">levels</span>=1:2 <span class="hljs-attribute">keys_zone</span>=fcache:250m <span class="hljs-attribute">inactive</span>=1d <span class="hljs-attribute">max_size</span>=1G;<br>fastcgi_temp_path /www/server/nginx/fastcgi_cache_dir/temp;<br>fastcgi_cache_key <span class="hljs-string">&quot;<span class="hljs-variable">$scheme</span><span class="hljs-variable">$request_method</span><span class="hljs-variable">$host</span><span class="hljs-variable">$request_uri</span>&quot;</span>;<br>fastcgi_cache_use_stale <span class="hljs-builtin-name">error</span> timeout invalid_header http_500;<br>fastcgi_ignore_headers Cache-Control Expires Set-Cookie;<br></code></pre></td></tr></table></figure>
+
+<p>小提示，缓存目录可自定义如下，也可按照下方路径创建目录并给予 777 权限：</p>
+<p>1、路径 /www/server/nginx/fastcgi_cache_dir 需自行创建 并给予 777 权限</p>
+<p>2、路径 /www/server/nginx/fastcgi_cache_dir/temp 需自行创建 并给予 777 权限</p>
+<p>步骤二：进入宝塔面板找到需要设置的网站，点开配置文件，如下图</p>
+<p><img src="https://www.xxhat.xyz/usr/uploads/2020/03/4193180040.png#mirages-width=1400&mirages-height=1311&mirages-cdn-type=3" srcset="/img/loading.gif" lazyload alt="配置步骤2" title="配置步骤2"></p>
+<p>将下列代码复制到 上图 所标示的位置</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><code class="hljs routeros"><span class="hljs-comment">#缓存扩展开始</span><br><span class="hljs-builtin-name">set</span> <span class="hljs-variable">$skip_cache</span> 0;<br><span class="hljs-comment">#post访问不缓存</span><br><span class="hljs-keyword">if</span> (<span class="hljs-variable">$request_method</span> = POST) &#123;<br>  <span class="hljs-builtin-name">set</span> <span class="hljs-variable">$skip_cache</span> 1;<br>&#125;<br><span class="hljs-comment">#动态查询不缓存</span><br><span class="hljs-keyword">if</span> (<span class="hljs-variable">$query_string</span> != <span class="hljs-string">&quot;&quot;</span>) &#123;<br>  <span class="hljs-builtin-name">set</span> <span class="hljs-variable">$skip_cache</span> 1;<br>&#125;<br><span class="hljs-comment">#pjax查询缓存</span><br><span class="hljs-keyword">if</span> (<span class="hljs-variable">$query_string</span> ~ <span class="hljs-string">&quot;_pjax=(.*)&quot;</span>) &#123;<br>  <span class="hljs-builtin-name">set</span> <span class="hljs-variable">$skip_cache</span> 0;<br>&#125;<br><span class="hljs-comment">#后台等特定页面不缓存（其他需求请自行添加即可）</span><br><span class="hljs-keyword">if</span> (<span class="hljs-variable">$request_uri</span> ~* <span class="hljs-string">&quot;/admin//action//search//feed/baidu_sitemap.xmlsitemap.xml&quot;</span>) &#123;<br>  <span class="hljs-builtin-name">set</span> <span class="hljs-variable">$skip_cache</span> 1;<br>&#125;<br><span class="hljs-comment">#对登录的用户不展示缓存</span><br><span class="hljs-keyword">if</span> (<span class="hljs-variable">$http_cookie</span> ~* <span class="hljs-string">&quot;typecho_authCode&quot;</span>) &#123;<br>  <span class="hljs-builtin-name">set</span> <span class="hljs-variable">$skip_cache</span> 1;<br>&#125;<br>location ~ [^/]\.php(/$) &#123;<br>  try_files <span class="hljs-variable">$uri</span> =404;<br>  fastcgi_pass unix:/tmp/php-cgi-74.sock;<br>  fastcgi_index index.php;<br>  include fastcgi.conf;<br>  include pathinfo.conf;<br>  #新增的缓存规则<br>  fastcgi_cache_bypass <span class="hljs-variable">$skip_cache</span>;<br>  fastcgi_no_cache <span class="hljs-variable">$skip_cache</span>;<br>  add_header X-自己取名-Cache <span class="hljs-string">&quot;<span class="hljs-variable">$upstream_cache_status</span> From <span class="hljs-variable">$host</span>&quot;</span>;<br>  fastcgi_cache fcache;<br>  fastcgi_cache_valid 200 1d;<br>&#125;<br><br>location ~* /这里的token要求和后台一致/_clean_cache(/.*) &#123;<br>  fastcgi_cache_purge fcache <span class="hljs-string">&quot;<span class="hljs-variable">$scheme</span><span class="hljs-variable">$request_method</span><span class="hljs-variable">$host</span><span class="hljs-variable">$1</span><span class="hljs-variable">$is_args</span><span class="hljs-variable">$args</span>&quot;</span>;<br>&#125;<br>header_filter_by_lua_block &#123;<br>  ngx.header[ngx.var.hide_cookie] = <span class="hljs-literal">nil</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>Token演示：例如后台设置1150AE6A4F7938AE754D则这里设置为</p>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs dart">location ~* /<span class="hljs-number">1150</span>AE6A4F7938AE754D/_clean_cache(/.*) &#123;<br>    fastcgi_cache_purge fcache <span class="hljs-string">&quot;<span class="hljs-subst">$scheme</span><span class="hljs-subst">$request_method</span><span class="hljs-subst">$host</span><span class="hljs-subst">$1</span><span class="hljs-subst">$is_args</span><span class="hljs-subst">$args</span>&quot;</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<hr>
+<p>设置完成后，再宝塔面板中找到Nginx进程，重载进程，然后重启Nginx，在 Typecho 后台 启动插件即可</p>
+<p>注意：插件里的token务必为 上面设置的，另外 目录，请和伪静态目录一致</p>
+<hr>
+<p>缓存效果</p>
+<hr>
+<p>替换新的配置，并且重载Nginx之后，访问前台页面，查看header，会多出一个 X-自己取名-Cache 标志。</p>
+<p>X-自己取名-Cache 一般会有3个状态：MISS、HIT、BYPASS。</p>
+<p>MISS表示未命中</p>
+<p>即这个页面还没被缓存，新发布或刚被删除的页面，首次访问将出现这个状态（图略）。</p>
+<p>HIT表示缓存命中</p>
+<p>打开一个会缓存的页面，比如文章内容html页面，F5刷新几次即可在F12开发者模式当中的Header头部信息中看到如图缓存命中状态：</p>
+<p>如出现下图所有 HIT 则缓存成功</p>
+<p><img src="https://www.xxhat.xyz/usr/uploads/2020/03/632267431.png#mirages-width=1155&mirages-height=1039&mirages-cdn-type=3" srcset="/img/loading.gif" lazyload alt="QQ截图20200306215451.png" title="QQ截图20200306215451.png"></p>
+<p>下载地址：<a target="_blank" rel="noopener" href="https://www.xxhat.xyz/usr/uploads/2020/03/2110354236.zip">Ncache_v1.0.zip</a></p>
+<hr>
+<p>关于缓存后，评论不更新以及页面统计数据不更新的设置方法</p>
+<p><a target="_blank" rel="noopener" href="https://cuojue.org/read/typecho-PostViews.html">Typecho的页面浏览统计JavaScript版</a></p>
+<p><a target="_blank" rel="noopener" href="https://cuojue.org/read/typecho-cache-handsome.html">handsome 主题缓存后修改</a></p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E8%AE%B0%E5%BD%95/">记录</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/Fastcgi-Cache/">Fastcgi_Cache</a>
+                    
+                      <a class="hover-with-bg" href="/tags/Typecho/">Typecho</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2020/03/08/154/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">坚果官网抢1499劵，你抢到了吗？我笑出了声</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2020/01/29/141/">
+                        <span class="hidden-mobile">菲律宾薄荷岛确实值得去，已景色为主，吃得过于普通</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <div id="twikoo"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#comments', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/twikoo@1/dist/twikoo.all.min.js', function() {
+        var options = Object.assign(
+          {"enable":true,"visitor":true,"envId":"https://twikoo-taupe.vercel.app"},
+          {
+            el: '#twikoo',
+            path: '',
+            onCommentLoaded: function() {
+              Fluid.plugins.initFancyBox('#twikoo .tk-content img:not(.tk-owo-emotion)');
+            }
+          }
+        )
+        twikoo.init(options)
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  
+    <script  src="https://cdn.jsdelivr.net/npm/tocbot@4/dist/tocbot.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4/anchor.min.js" ></script>
+  
+  
+    <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js" ></script>
+  
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+        typing(title);
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

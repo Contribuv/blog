@@ -1,0 +1,802 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="xxhat">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="一个个人博客">
+<meta property="og:type" content="website">
+<meta property="og:title" content="晓新哈特">
+<meta property="og:url" content="http://yoursite.com/page/3/index.html">
+<meta property="og:site_name" content="晓新哈特">
+<meta property="og:description" content="一个个人博客">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="xxhat">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  <title>晓新哈特</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"yoursite.com","root":"/","version":"1.8.14","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 100vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>晓新哈特</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('https://cdn.jsdelivr.net/gh/Contribuv/public/usr/uploads/2021/02/3261650281.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="有人出生在罗马，有人生来就是牛马">
+              
+            </span>
+
+            
+          </div>
+
+          
+            <div class="scroll-down-bar">
+              <i class="iconfont icon-arrowdown"></i>
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      <div class="container nopadding-x-md">
+        <div class="py-5" id="board"
+          style=margin-top:0>
+          
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-10 m-auto">
+                
+
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/03/10/174/" target="_self">
+          个人收藏的一些iPhone壁纸，喜欢的自行下载
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/03/10/174/" target="_self">
+          
+          
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-03-10 11:18" pubdate>
+              2020-03-10
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/uncategorized/">uncategorized</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/iPhone%E5%A3%81%E7%BA%B8/">iPhone壁纸</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/03/08/154/" target="_self">
+          坚果官网抢1499劵，你抢到了吗？我笑出了声
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/03/08/154/" target="_self">
+          
+          原价 2399 - 1499劵 900块入手，当然划算，实际上嘛！ (⊙o⊙)… 你懂的    [button color&#x3D;”dark” icon&#x3D;”” url&#x3D;”https:&#x2F;&#x2F;jingfen.jd.com&#x2F;item.html?sku&#x3D;100009220542&amp;q&#x3D;EHATFBVnE3ITERFsIHMWFBFpQyUUQEBoRXQaERZnGSIRRRZqQ3MSEhBnQCYTJR
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-03-08 18:10" pubdate>
+              2020-03-08
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E7%94%9F%E6%B4%BB/">生活</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%9D%9A%E6%9E%9C1499%E5%8A%B5/">坚果1499劵</a>
+            
+              <a href="/tags/%E5%9D%9A%E6%9E%9C200%E5%8A%B5/">坚果200劵</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/03/07/145/" target="_self">
+          Typecho配置Fastcgi_Cache缓存，如静态一般丝滑
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/03/07/145/" target="_self">
+          
+          此插件原作者 https:&#x2F;&#x2F;cuojue.org&#x2F;read&#x2F;typecho-fastcgi_cache.html  为了让接下来的步骤简洁，推荐使用宝塔面板（因已内置 Ngx_cache_purge 模块） 插件特性直接在nginx层缓存，媲美静态页面速度 php请安装7.4 版本  支持所有页面缓存 支持内容修改之后自动更新内容、分类、首页缓存 支持评论生效更新缓存 支持登录状态下不缓存 支持
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-03-07 05:33" pubdate>
+              2020-03-07
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%AE%B0%E5%BD%95/">记录</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Fastcgi-Cache/">Fastcgi_Cache</a>
+            
+              <a href="/tags/Typecho/">Typecho</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/01/29/141/" target="_self">
+          菲律宾薄荷岛确实值得去，已景色为主，吃得过于普通
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/01/29/141/" target="_self">
+          
+          在年前就计划到菲律宾旅游，开始准备签证，然后将护照拿给旅游社的人帮忙办理  2020年1月19日 出发  我们是下午15:40分飞往菲律宾，到菲律宾已经7:50了，下了飞机由旅行社接我们去酒店从机场沿途到酒店，正好遇到他们当地的圣婴节（好比我们中国的春节），路边很多小年轻嬉戏打闹，看着沿途的建筑物，我不淡定了，因为和我想象中的菲律宾打不同，我想象中的是繁华，实际上是很穷  2020年1月20日 第
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-01-29 19:18" pubdate>
+              2020-01-29
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E6%97%85%E6%B8%B8/">旅游</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E8%8F%B2%E5%BE%8B%E5%AE%BE/">菲律宾</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/01/18/139/" target="_self">
+          2020年iPhone全系国行无发票可能会拒保
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/01/18/139/" target="_self">
+          
+          前段时间在威锋App上看见不少小伙伴无发票，导致拒保，没想到今天也轮到我被拒保了 233..  我这台手机是5号买的，今天发现摄像头里面有灰尘，昨晚天才吧预约，今天到售后去维修一下，到了售后让我出示发票，我表示发票用于报账了（可抵税，开公司的小伙伴应该知道），发票联正好已经交给代账公司了，然后给我的答复是需要原件才得以保修，后来纠缠400客服电话，还是拒保。  然后我网上查了一下，因为无发票拒保的
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-01-18 22:38" pubdate>
+              2020-01-18
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E7%94%9F%E6%B4%BB/">生活</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/iPhone%E6%8B%92%E4%BF%9D/">iPhone拒保</a>
+            
+              <a href="/tags/%E8%8B%B9%E6%9E%9C%E6%97%A0%E5%8F%91%E7%A5%A8%E6%97%A0%E6%B3%95%E4%BF%9D%E4%BF%AE/">苹果无发票无法保修</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/01/16/129/" target="_self">
+          过年准备在菲律宾度过了，希望平安！
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/01/16/129/" target="_self">
+          
+          今天去北海万达换比索，血亏1000比索，原汇率4000人民币能换30000比索，结果果汇率涨了 2333..  无奈啊，现在一切准备就绪，希望平安！  今天又报道那边火山爆发，还好不是去那个城市，准备去宿务薄荷岛，这边不受影响  听说宿务的水果很便宜，到了我一定要买整个榴莲大饱口福
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-01-16 21:59" pubdate>
+              2020-01-16
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E7%94%9F%E6%B4%BB/">生活</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E8%8F%B2%E5%BE%8B%E5%AE%BE/">菲律宾</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/01/16/127/" target="_self">
+          说一说我为什么购买iPhone 11而并非11 Pro和 Pro Max
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/01/16/127/" target="_self">
+          
+          JJYY：博主是穷人，不要讽刺我 233  在换11前，我一台 xs max 一台 xr ，当时还在犹豫要不要上新，毕竟5G很快就要出来了！还没等我考虑，身边的朋友就已经上车 11 pro max 了，还有个朋友上车的 11 pro ，我分别体验了一下233.还是 11 更适合我，几个特点：尺寸是我喜欢的，还有就是基佬紫和LED这款屏幕，另外就是价格了，毕竟家里没矿..LCD永不为奴，233，23
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-01-16 02:57" pubdate>
+              2020-01-16
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E7%94%9F%E6%B4%BB/">生活</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/iPhone-11/">iPhone 11</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/01/15/125/" target="_self">
+          奉劝各位购买HEA(醒狮)的小伙伴不要买了，质量差
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/01/15/125/" target="_self">
+          
+          奉劝各位购买HEA(醒狮)的小伙伴，不要再买了，质量真的好差，价格也不便宜. 博主，从2019年4月份开始喜欢上这个牌子，喜欢当然是小狮子，但是最近发现质量真的好差，上周购买的一件羽绒服，1980元，居然还没我买的399的美特斯邦威保暖，而且只穿了一次，就掉线了，现在这件衣服是完全不能够穿了，因为掉线我也不想花钱再拿到缝纫店去弄好，另外它家的裤子真的只是卖款式，质量也是特别差，至于卫衣那就真的是一
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-01-15 04:29" pubdate>
+              2020-01-15
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E7%94%9F%E6%B4%BB/">生活</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/HEA%E5%9D%91/">HEA坑</a>
+            
+              <a href="/tags/HEA%E8%B4%A8%E9%87%8F%E4%B8%8D%E5%A5%BD/">HEA质量不好</a>
+            
+              <a href="/tags/HEA%E8%B4%A8%E9%87%8F%E5%B7%AE/">HEA质量差</a>
+            
+              <a href="/tags/%E9%86%92%E7%8B%AE%E8%B4%A8%E9%87%8F%E4%B8%8D%E5%A5%BD/">醒狮质量不好</a>
+            
+              <a href="/tags/%E9%86%92%E7%8B%AE%E8%B4%A8%E9%87%8F%E4%B8%8D%E8%A1%8C/">醒狮质量不行</a>
+            
+              <a href="/tags/%E9%86%92%E7%8B%AE%E8%BF%99%E4%B8%AA%E7%89%8C%E5%AD%90%E8%B4%A8%E9%87%8F%E4%B8%8D%E5%A5%BD/">醒狮这个牌子质量不好</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2019/12/28/120/" target="_self">
+          心态崩了，这QQ也太容易被TX冻结了吧
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2019/12/28/120/" target="_self">
+          
+          以后不敢在TX聊某些话题了，看来用TG是真的有必要的
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2019-12-28 06:35" pubdate>
+              2019-12-28
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E7%94%9F%E6%B4%BB/">生活</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%BF%83%E6%80%81%E5%B4%A9%E4%BA%86/">心态崩了</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2019/11/22/119/" target="_self">
+          冬天来了，取暖是个大问题，踢脚线？油汀？空调？
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2019/11/22/119/" target="_self">
+          
+          博主今年冬天在南方过，所以今年没暖气可用，这几天实在冷得不行（本地的好像并不怕冷）  在知乎，贴吧，还有淘宝，京东看了一下取暖去的销量排行，油汀和踢脚线好像卖得好一点  我前天晚上买了一台吹得很神的取暖去（踢脚线） 价格不贵300来块，卧室面积不大10多个平方，但是。。。。 这东西太tm坑了，一晚上消耗电费39.5元，只能当小太阳使用（近取暖） 我们这儿电费4毛5每度  这东西是像小太阳一样近取暖
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2019-11-22 00:34" pubdate>
+              2019-11-22
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E7%94%9F%E6%B4%BB/">生活</a>
+            
+          </div>
+        
+        
+      </div>
+    </article>
+  </div>
+
+
+
+  <nav aria-label="navigation">
+    <span class="pagination" id="pagination">
+      <a class="extend prev" rel="prev" href="/page/2/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/#board">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/#board">4</a><a class="page-number" href="/page/5/#board">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/#board">7</a><a class="extend next" rel="next" href="/page/4/#board"><i class="iconfont icon-arrowright"></i></a>
+    </span>
+  </nav>
+
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+        typing(title);
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>
