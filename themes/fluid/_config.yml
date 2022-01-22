@@ -989,9 +989,9 @@ links:
 static_prefix:
   # 内部静态
   # Internal static
-  internal_js: /js
-  internal_css: /css
-  internal_img: /img
+  internal_js: https://cdn.jsdelivr.net/gh/Contribuv/blog@main/source/js #/js
+  internal_css: https://cdn.jsdelivr.net/gh/Contribuv/blog@main/source/css #/css
+  internal_img: https://cdn.jsdelivr.net/gh/Contribuv/blog@main/source/img #/img
 
   anchor: https://cdn.jsdelivr.net/npm/anchor-js@4/
 
