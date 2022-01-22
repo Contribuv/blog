@@ -510,7 +510,7 @@ index:
 # Post Page
 #---------------------------
 post:
-  banner_img: /img/default.png
+  banner_img: https://cdn.jsdelivr.net/gh/Contribuv/blog@main/source/img/default.png
   banner_img_height: 35
   banner_mask_alpha: 0.3
 
@@ -806,7 +806,7 @@ cusdis:
 # Archive Page
 #---------------------------
 archive:
-  banner_img: /img/565dfs.jpg
+  banner_img: https://cdn.jsdelivr.net/gh/Contribuv/blog@main/source/img/565dfs.jpg
   banner_img_height: 60
   banner_mask_alpha: 0.3
   subtitle:
@@ -818,7 +818,7 @@ archive:
 #---------------------------
 category:
   enable: true
-  banner_img: /img/2081665498.jpg
+  banner_img: https://cdn.jsdelivr.net/gh/Contribuv/blog@main/source/img/2081665498.jpg
   banner_img_height: 60
   banner_mask_alpha: 0.3
   subtitle:
@@ -848,7 +848,7 @@ category:
 #---------------------------
 tag:
   enable: true
-  banner_img: /img/3459576862.jpg
+  banner_img: https://cdn.jsdelivr.net/gh/Contribuv/blog@main/source/img/3459576862.jpg
   banner_img_height: 60
   banner_mask_alpha: 0.3
   subtitle:
@@ -866,7 +866,7 @@ tag:
 #---------------------------
 about:
   enable: true
-  banner_img: /img/ivsky.jpg
+  banner_img: https://cdn.jsdelivr.net/gh/Contribuv/blog@main/source/img/ivsky.jpg
   banner_img_height: 50
   banner_mask_alpha: 0.3
   subtitle:
@@ -889,7 +889,7 @@ about:
 # Custom Page through `hexo new page`
 #---------------------------
 page:
-  banner_img: /img/default.png
+  banner_img: https://cdn.jsdelivr.net/gh/Contribuv/blog@main/source/img/default.png
   banner_img_height: 60
   banner_mask_alpha: 0.3
 
@@ -900,7 +900,7 @@ page:
 #---------------------------
 page404:
   enable: true
-  banner_img: /img/404.jpg
+  banner_img: https://cdn.jsdelivr.net/gh/Contribuv/blog@main/source/img/404.jpg
   banner_img_height: 85
   banner_mask_alpha: 0.3
   subtitle: "该页面不存在"
@@ -912,7 +912,7 @@ page404:
 #---------------------------
 links:
   enable: true
-  banner_img: /img/link.jpg
+  banner_img: https://cdn.jsdelivr.net/gh/Contribuv/blog@main/source/img/link.jpg
   banner_img_height: 60
   banner_mask_alpha: 0.3
   subtitle:
@@ -989,9 +989,9 @@ links:
 static_prefix:
   # 内部静态
   # Internal static
-  internal_js: https://cdn.jsdelivr.net/gh/Contribuv/blog@main/source/js #/js
-  internal_css: https://cdn.jsdelivr.net/gh/Contribuv/blog@main/source/css #/css
-  internal_img: https://cdn.jsdelivr.net/gh/Contribuv/blog@main/source/img #/img
+  internal_js:  /js #https://cdn.jsdelivr.net/gh/Contribuv/blog@main/source/js
+  internal_css: /css #https://cdn.jsdelivr.net/gh/Contribuv/blog@main/source/css
+  internal_img: /img #https://cdn.jsdelivr.net/gh/Contribuv/blog@main/source/img
 
   anchor: https://cdn.jsdelivr.net/npm/anchor-js@4/
 
