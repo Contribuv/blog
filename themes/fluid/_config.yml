@@ -795,7 +795,7 @@ remark42:
 twikoo:
   enable: true
   visitor: true
-  envId: https://twikoo-contribuv.vercel.app/ # 腾讯云环境id
+  envId: https://twikoo-contribuv.vercel.app # 腾讯云环境id
   # region: ap-guangzhou # 环境地域，默认为 ap-shanghai
 
 # Cusdis
