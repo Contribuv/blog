@@ -1,21 +1,16 @@
 ![Hexo Logo](https://github.com/vercel/vercel/blob/main/packages/frameworks/logos/hexo.svg)
 
-# Hexo Example
+# 说明
 
-This directory is a brief example of a [Hexo](https://hexo.io/) site that can be deployed to Vercel with zero configuration.
+这是由[Hexo](https://hexo.io/) 构建的一个私人博客
 
-## Deploy Your Own
+## 内容受到保护
 
-Deploy your own Hexo project with Vercel.
+博客建立日期 2013年10月22日
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/vercel/vercel/tree/main/examples/hexo&template=hexo)
 
-_Live Example: https://hexo-template.vercel.app_
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/vercel/vercel/tree/main/examples/hexo&template=hexo) 
 
-### How We Created This Example
+你也可以通过上述按钮创建博客
 
-To get started with Hexo for deployment with Vercel, you can use the [Hexo CLI](https://hexo.io/docs/index.html#Installation) to initialize the project:
-
-```shell
-$ hexo init project-name
-```
+完毕
