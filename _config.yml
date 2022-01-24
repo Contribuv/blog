@@ -9,7 +9,7 @@ description: 一个个人博客
 keywords: 晓新哈特的博客，晓新哈特，六号博客
 author: 晓新哈特
 language: zh-CN
-timezone:
+timezone: Asia/Shanghai
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
