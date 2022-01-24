@@ -14,7 +14,7 @@ page.banner_mask_alpha = page.banner_mask_alpha || theme.post.banner_mask_alpha
             <!-- SEO header -->
             <h1 style="display: none"><%= page.subtitle || page.title %></h1>
             <% if(theme.post.updated && theme.post.updated.enable) { %>
-              <p class="note note-info">
+              <p class="note note-warning">
                 <% if (theme.post.updated.relative) { %>
                   <%- theme.post.updated.content %><%- relative_date(page.updated, theme.post.meta.date.format) %>
                 <% } else { %>
@@ -46,7 +46,7 @@ page.banner_mask_alpha = page.banner_mask_alpha || theme.post.banner_mask_alpha
                 <% } %>
               </div>
               <% if(theme.post.copyright.enable && theme.post.copyright.content && page.copyright !== false) { %>
-                <p class="note note-warning">
+                <p class="note note-info">
                   <% if (typeof page.copyright === 'string' && page.copyright !== '') { %>
                     <%- page.copyright %>
                   <% } else { %>
