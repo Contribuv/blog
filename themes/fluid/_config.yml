@@ -997,7 +997,7 @@ static_prefix:
   # Internal static
   internal_js:  /js #https://cdn.jsdelivr.net/gh/Contribuv/blog@main/source/js
   internal_css: /css #https://cdn.jsdelivr.net/gh/Contribuv/blog@main/source/css
-  internal_img: /img #/image
+  internal_img: /image #/image
 
   anchor: https://cdn.jsdelivr.net/npm/anchor-js@4/
 
