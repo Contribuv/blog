@@ -5,6 +5,9 @@
   cursor: default;
   overflow-wrap: break-word;
 }
+.tk-footer {
+    display: none;
+}
 .banner .mask {
   position: absolute;
   width: 100%;
