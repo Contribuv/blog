@@ -1018,7 +1018,7 @@ static_prefix:
 
   katex: https://cdn.xxhat.xyz/npm/katex@0/dist/
 
-  busuanzi: #https://busuanzi.ibruce.info/busuanzi/2.3/
+  busuanzi: https://busuanzi.ibruce.info/busuanzi/2.3/
 
   clipboard: https://cdn.xxhat.xyz/npm/clipboard@2/dist/
 
