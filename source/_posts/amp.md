@@ -4,8 +4,8 @@ tags:
   - 博客SEO
 categories:
   - - 优化
-index_img: https://cdn.jsdelivr.net/gh/Contribuv/public@latest/usr/uploads/2022/01/1709331979.jpg
-banner_img: https://cdn.jsdelivr.net/gh/Contribuv/public@latest/usr/uploads/2022/01/1709331979.jpg
+index_img: http://cdn.xxhat.xyz/gh/Contribuv/public@latest/usr/uploads/2022/01/1709331979.jpg
+banner_img: http://cdn.xxhat.xyz/gh/Contribuv/public@latest/usr/uploads/2022/01/1709331979.jpg
 date: 2019-02-23 05:21:00
 updated: 2019-02-23 05:21:00
 post:
