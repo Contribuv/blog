@@ -811,6 +811,7 @@ archive:
   banner_img_height: 38
   banner_mask_alpha: 0.3
   subtitle:
+  post_limit: 10
 
 
 #---------------------------
