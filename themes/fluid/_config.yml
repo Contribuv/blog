@@ -512,7 +512,7 @@ index:
 #---------------------------
 post:
   banner_img: /image/default.png
-  banner_img_height: 35
+  banner_img_height: 38
   banner_mask_alpha: 0.3
 
   # 文章在首页的默认封面图，当没有指定 index_img 时会使用该图片，若两者都为空则不显示任何图片
@@ -808,7 +808,7 @@ cusdis:
 #---------------------------
 archive:
   banner_img: /image/565dfs.jpg
-  banner_img_height: 60
+  banner_img_height: 38
   banner_mask_alpha: 0.3
   subtitle:
 
@@ -820,7 +820,7 @@ archive:
 category:
   enable: true
   banner_img: /image/2081665498.jpg
-  banner_img_height: 60
+  banner_img_height: 38
   banner_mask_alpha: 0.3
   subtitle:
 
@@ -850,7 +850,7 @@ category:
 tag:
   enable: true
   banner_img: /image/3459576862.jpg
-  banner_img_height: 60
+  banner_img_height: 38
   banner_mask_alpha: 0.3
   subtitle:
   tagcloud:
@@ -868,7 +868,7 @@ tag:
 about:
   enable: true
   banner_img: /image/ivsky.jpg
-  banner_img_height: 50
+  banner_img_height: 38
   banner_mask_alpha: 0.3
   subtitle:
   avatar: /image/avatar.jpg
@@ -891,7 +891,7 @@ about:
 #---------------------------
 page:
   banner_img: /image/default.png
-  banner_img_height: 60
+  banner_img_height: 38
   banner_mask_alpha: 0.3
 
 
@@ -902,7 +902,7 @@ page:
 page404:
   enable: true
   banner_img: /image/404.jpg
-  banner_img_height: 85
+  banner_img_height: 100
   banner_mask_alpha: 0.3
   subtitle: "该页面不存在"
 
@@ -914,7 +914,7 @@ page404:
 links:
   enable: true
   banner_img: /image/link.jpg
-  banner_img_height: 60
+  banner_img_height: 38
   banner_mask_alpha: 0.3
   subtitle:
   # 友链的成员项
