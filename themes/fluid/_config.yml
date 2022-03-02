@@ -956,7 +956,18 @@ links:
       link: "https://blog.imalan.cn",
       avatar: "https://blog.imalan.cn/logo.jpg"
     }
-
+    - {
+      title: "A博客",
+      intro: "重庆博主",
+      link: "https://aboke.net/",
+      avatar: "https://aboke.net/img/logo.png"
+    }
+    - {
+      title: "若志奕鑫",
+      intro: "博客主题原创博主",
+      link: "https://www.rz.sb/",
+      avatar: "https://cravatar.cn/avatar/1fd6f6445f5a58b6c72835bb49071229"
+    }
   # 当成员头像加载失败时，替换为指定图片
   # When the member avatar fails to load, replace the specified image
   onerror_avatar: /image/avatar.png
