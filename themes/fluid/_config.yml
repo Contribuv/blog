@@ -790,7 +790,7 @@ remark42:
 twikoo:
   enable: true
   visitor: true
-  envId: https://twikoo-contribuv.vercel.app
+  envId: https://twikoo-5qaiwna84-contribuv.vercel.app
   # region: ap-guangzhou # 环境地域，默认为 ap-shanghai
 
 # Cusdis
