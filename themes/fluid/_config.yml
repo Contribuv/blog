@@ -968,6 +968,12 @@ links:
       link: "https://www.rz.sb/",
       avatar: "https://cravatar.cn/avatar/1fd6f6445f5a58b6c72835bb49071229"
     }
+    - {
+      title: "虎山居",
+      intro: "一个温暖的小窝",
+      link: "https://blog.hushanju.com/",
+      avatar: "https://blog.hushanju.com/images/avatar.jpeg"
+    }    
   # 当成员头像加载失败时，替换为指定图片
   # When the member avatar fails to load, replace the specified image
   onerror_avatar: /image/avatar.png
