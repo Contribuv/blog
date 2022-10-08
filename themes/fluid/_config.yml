@@ -790,7 +790,7 @@ remark42:
 twikoo:
   enable: true
   visitor: true
-  envId: https://twikoo-five-roan.vercel.app/
+  envId: https://api.xxhat.xyz/
   # region: ap-guangzhou # 环境地域，默认为 ap-shanghai
 
 # Cusdis
