@@ -3,12 +3,12 @@
   "version": "0.0.0",
   "private": true,
   "hexo": {
-    "version": "5.4.1"
+    "version": "5.4.2"
   },
   "dependencies": {
     "column": "^0.0.2",
     "filename": "^0.5.0",
-    "hexo": "^5.4.1",
+    "hexo": "^5.4.2",
     "hexo-generator-archive": "^1.0.0",
     "hexo-generator-baidu-sitemap": "^0.1.9",
     "hexo-generator-category": "^1.0.0",

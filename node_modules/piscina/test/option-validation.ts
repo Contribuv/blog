@@ -7,6 +7,12 @@ test('filename cannot be non-null/non-string', async ({ throws }) => {
   }) as any), /options.filename must be a string or null/);
 });
 
+test('name cannot be non-null/non-string', async ({ throws }) => {
+  throws(() => new Piscina(({
+    name: 12
+  }) as any), /options.name must be a string or null/);
+});
+
 test('minThreads must be non-negative integer', async ({ throws }) => {
   throws(() => new Piscina(({
     minThreads: -1
@@ -55,7 +61,7 @@ test('idleTimeout must be non-negative integer', async ({ throws }) => {
   }) as any), /options.idleTimeout must be a non-negative integer/);
 });
 
-test('maxQueue must be non-negative integer', async ({ throws, is }) => {
+test('maxQueue must be non-negative integer', async ({ throws, equal }) => {
   throws(() => new Piscina(({
     maxQueue: -1
   }) as any), /options.maxQueue must be a non-negative integer/);
@@ -65,7 +71,7 @@ test('maxQueue must be non-negative integer', async ({ throws, is }) => {
   }) as any), /options.maxQueue must be a non-negative integer/);
 
   const p = new Piscina({ maxQueue: 'auto', maxThreads: 2 });
-  is(p.options.maxQueue, 4);
+  equal(p.options.maxQueue, 4);
 });
 
 test('useAtomics must be a boolean', async ({ throws }) => {

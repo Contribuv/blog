@@ -3,15 +3,26 @@ import Piscina from '..';
 import { test } from 'tap';
 import { resolve } from 'path';
 
-test('postTask() can transfer ArrayBuffer instances', async ({ is }) => {
+test('postTask() can transfer ArrayBuffer instances', async ({ equal }) => {
   const pool = new Piscina({
     filename: resolve(__dirname, 'fixtures/simple-isworkerthread.ts')
   });
 
   const ab = new ArrayBuffer(40);
   await pool.runTask({ ab }, [ab]);
-  is(pool.completed, 1);
-  is(ab.byteLength, 0);
+  equal(pool.completed, 1);
+  equal(ab.byteLength, 0);
+});
+
+test('postTask() can transfer ArrayBuffer instances', async ({ equal }) => {
+  const pool = new Piscina({
+    filename: resolve(__dirname, 'fixtures/simple-isworkerthread.ts')
+  });
+
+  const ab = new ArrayBuffer(40);
+  await pool.run({ ab }, { transferList: [ab] });
+  equal(pool.completed, 1);
+  equal(ab.byteLength, 0);
 });
 
 test('postTask() cannot clone build-in objects', async ({ rejects }) => {
@@ -46,6 +57,9 @@ test('postTask() validates transferList', async ({ rejects }) => {
 
   rejects(pool.runTask('0', 42 as any),
     /transferList argument must be an Array/);
+
+  rejects(pool.run('0', { transferList: 42 as any }),
+    /transferList argument must be an Array/);
 });
 
 test('postTask() validates filename', async ({ rejects }) => {
@@ -55,6 +69,18 @@ test('postTask() validates filename', async ({ rejects }) => {
 
   rejects(pool.runTask('0', [], 42 as any),
     /filename argument must be a string/);
+
+  rejects(pool.run('0', { filename: 42 as any }),
+    /filename argument must be a string/);
+});
+
+test('postTask() validates name', async ({ rejects }) => {
+  const pool = new Piscina({
+    filename: resolve(__dirname, 'fixtures/eval.js')
+  });
+
+  rejects(pool.run('0', { name: 42 as any }),
+    /name argument must be a string/);
 });
 
 test('postTask() validates abortSignal', async ({ rejects }) => {
@@ -63,7 +89,10 @@ test('postTask() validates abortSignal', async ({ rejects }) => {
   });
 
   rejects(pool.runTask('0', [], undefined, 42 as any),
-    /abortSignal argument must be an object/);
+    /signal argument must be an object/);
+
+  rejects(pool.run('0', { signal: 42 as any }),
+    /signal argument must be an object/);
 });
 
 test('Piscina emits drain', async ({ ok }) => {
@@ -81,18 +110,24 @@ test('Piscina emits drain', async ({ ok }) => {
   ok(drained);
 });
 
-test('Piscina can use async loaded workers', async ({ is }) => {
+test('Piscina can use async loaded workers', async ({ equal }) => {
   const pool = new Piscina({
     filename: resolve(__dirname, 'fixtures/eval-async.js')
   });
-  is(await pool.runTask('1'), 1);
+  equal(await pool.runTask('1'), 1);
 });
 
-test('Piscina can use async loaded esm workers', {
-  skip: process.version.startsWith('v12.') // ESM support is flagged on v12.x
-}, async ({ is }) => {
+test('Piscina can use async loaded esm workers', {}, async ({ equal }) => {
   const pool = new Piscina({
     filename: resolve(__dirname, 'fixtures/esm-async.mjs')
   });
-  is(await pool.runTask('1'), 1);
+  equal(await pool.runTask('1'), 1);
+});
+
+test('Piscina.run options is correct type', async ({ rejects }) => {
+  const pool = new Piscina({
+    filename: resolve(__dirname, 'fixtures/eval.js')
+  });
+
+  rejects(pool.run(42, 1 as any), /options must be an object/);
 });
