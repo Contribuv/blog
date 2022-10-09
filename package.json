@@ -28,5 +28,8 @@
   "scripts": {
     "dev": "hexo server -p $PORT",
     "build": "hexo generate"
+  },
+  "devDependencies": {
+    "parcel": "^2.7.0"
   }
 }
