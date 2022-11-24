@@ -323,7 +323,7 @@ navbar:
     - { key: "category", link: "/categories/", icon: "iconfont icon-category-fill" }
     - { key: "tag", link: "/tags/", icon: "iconfont icon-tags-fill" }
     - { key: "links", link: "/links/", icon: "iconfont icon-link-fill" }
-    - { key: "links", link: "https://rous.xxhat.xyz:4432", icon: "iconfont icon-clipcheck" ,name: '网盘'}
+    - { key: "links", link: "https://file.xxhat.xyz", icon: "iconfont icon-clipcheck" ,name: '网盘'}
     - { key: "about", link: "/about/", icon: "iconfont icon-user-fill" }
 
 
