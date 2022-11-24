@@ -1,8 +1,7 @@
 ---
 title: iPhone 11 发布了，然而并没有让我换新机的欲望！
 tags:
-  - iPhone 11
-id: '105'
+  - - iPhone 11
 categories:
   - - 生活
 date: 2019-09-12 06:35:38

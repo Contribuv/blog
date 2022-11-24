@@ -16,7 +16,7 @@ timezone: Asia/Shanghai
 url: http://www.xxhat.xyz
 root: /
 permalink: :year/:month/:day/:title/
-permalink_defaults:
+permalink_defaults: 
 
 # Directory
 source_dir: source
@@ -26,13 +26,13 @@ archive_dir: archives
 category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
-skip_render:
+skip_render: 
 
 # Writing
-new_post_name: :title.md # File name of new posts
+new_post_name: title.md # File name of new posts
 default_layout: post
 titlecase: false # Transform title into titlecase
-external_link:
+external_link: 
   enable: true # Open external links in new tab
   field: site # Apply to the whole site
   exclude: ''
@@ -41,25 +41,25 @@ render_drafts: false
 post_asset_folder: true
 relative_link: false
 future: true
-highlight:
+highlight: 
   enable: true
   line_number: true
   auto_detect: false
-  tab_replace:
+  tab_replace: 
   
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
 # per_page: Posts displayed per page. (0 = disable pagination)
 # order_by: Posts order. (Order by date descending by default)
-index_generator:
+index_generator: 
   path: ''
   per_page: 10
   order_by: -date
   
 # Category & Tag
 default_category: uncategorized
-category_map:
-tag_map:
+category_map: 
+tag_map: 
 
 # Date / Time format
 ## Hexo uses Moment.js to parse and display date
@@ -76,9 +76,9 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: fluid
+theme: fluid #landscape 
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
-deploy:
-  type:
+deploy: 
+  type: 

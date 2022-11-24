@@ -2,7 +2,6 @@
 title: 推荐一个秒级检查、自动拉黑的CC防御
 tags:
   - CCKiller
-id: '29'
 categories:
   - - 记录
 date: 2019-04-09 02:42:00
