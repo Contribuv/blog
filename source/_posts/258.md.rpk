@@ -1,0 +1,178 @@
+---
+title: 极米H3S观看YouTube教程，适用于RS2以及Z6X和Z8X等机型
+tags:
+  - 极米YouTube
+  - 极米油管
+categories:
+  - - 生活
+index_img: https://cdn.xxhat.xyz/gh/Contribuv/public@latest/usr/uploads/2022/01/458091334.jpg#vwid=1920&vhei=1080
+banner_img: https://cdn.xxhat.xyz/gh/Contribuv/public@latest/usr/uploads/2022/01/3233457848.png#vwid=1920&vhei=1080
+date: 2022-01-14 04:36:00
+post:
+  meta:
+    author:  # 作者，优先根据 front-matter 里 author 字段，其次是 hexo 配置中 author 值
+      enable: false
+    date:  # 文章日期，优先根据 front-matter 里 date 字段，其次是 md 文件日期
+      enable: true
+      format: "dddd, MMMM Do YYYY, h:mm a"  # 格式参照 ISO-8601 日期格式化
+    wordcount:  # 字数统计
+      enable: true
+      format: "{} 字"  # 显示的文本，{}是数字的占位符（必须包含)，下同
+    min2read:  # 阅读时间
+      enable: true
+      format: "{} 分钟"
+    views:  # 阅读次数
+      enable: false
+      source: "leancloud"  # 统计数据来源，可选：leancloud | busuanzi   注意不蒜子会间歇抽风
+      format: "{} 次"
+---
+
+* * *
+
+### ****一个朋友回国使用极米 H3S 看不了 YouTube 和 HBO­Max，通过我得一阵折腾，终于可以看了现在说一下方法。****
+
+* * *
+
+#### 准备工作： 
+
+#### 1、一只 U 盘
+
+#### 2、一个鼠标（有线无线均可）
+
+#### 3、订阅节点地址
+
+#### 4、一台极米 H3S（RS2 Z6X Z8X 同理）
+
+* * *
+
+#### 第一步：将 <a href="https://file.xxhat.xyz/%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7/%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86%E5%99%A8.apk1"> ES文件管理器.APK1 </a>  <a href="https://file.xxhat.xyz/%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7/%E6%B5%B7%E5%A4%96%E7%94%A8%E6%88%B7Youtube.apk1">Smar­tY­ouTube.APK1</a> <a href="https://file.xxhat.xyz/%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7/%E6%B5%B7%E5%A4%96%E5%9B%9E%E5%9B%BD.apk1">v2rayng.APK1</a> 以及 订阅.txt（将订阅 url 存入这个文本中）
+
+注意：极米不支持APK直接安装，需要改后缀为 APK1才能安装。
+
+没有订阅节点的同学，可以在这里购买，或者在github上白嫖节点 <a href="https://小机场.net">小机场</a> 得到订阅地址后保存为 订阅.txt 等会儿导入v2rayng，就可以看油管了。
+
+#### 第二步：在投影上安装这些 APP
+
+  
+
+* * *
+
+  
+
+![1.jpg](http://cdn.xxhat.xyz/gh/Contribuv/public@latest/usr/uploads/2022/01/458091334.jpg#vwid=1920&vhei=1080 "1.jpg")  
+![2.jpg](http://cdn.xxhat.xyz/gh/Contribuv/public@latest/usr/uploads/2022/01/3214178081.jpg#vwid=1920&vhei=1080 "2.jpg")  
+![3.jpg](http://cdn.xxhat.xyz/gh/Contribuv/public@latest/usr/uploads/2022/01/1806422623.jpg#vwid=1920&vhei=1080 "3.jpg")  
+![4.jpg](http://cdn.xxhat.xyz/gh/Contribuv/public@latest/usr/uploads/2022/01/1569006492.jpg#vwid=1920&vhei=1080 "4.jpg")  
+![5.jpg](http://cdn.xxhat.xyz/gh/Contribuv/public@latest/usr/uploads/2022/01/273481579.jpg#vwid=1920&vhei=1080 "5.jpg")  
+
+#### 如图所示安装后，会显示相应的图标
+
+#### 
+
+* * *
+
+
+第三步：打开 V2rayNG
+
+* * *
+
+![6.jpg](http://cdn.xxhat.xyz/gh/Contribuv/public@latest/usr/uploads/2022/01/3081778366.jpg#vwid=1920&vhei=1080 "6.jpg")  
+
+  
+
+#### 安装好后的界面
+
+  
+
+![7.jpg](http://cdn.xxhat.xyz/gh/Contribuv/public@latest/usr/uploads/2022/01/1578543293.jpg#vwid=1920&vhei=1080 "7.jpg")  
+
+####   
+
+#### 第四步：为 V2rayNG 添加订阅地址
+
+  
+
+![8.jpg](http://cdn.xxhat.xyz/gh/Contribuv/public@latest/usr/uploads/2022/01/1616163898.jpg#vwid=1920&vhei=1080 "8.jpg")  
+
+  
+
+#### 注意看图片中鼠标的位置
+
+  
+
+![9.jpg](http://cdn.xxhat.xyz/gh/Contribuv/public@latest/usr/uploads/2022/01/2227700830.jpg#vwid=1920&vhei=1080 "9.jpg")  
+
+####   
+
+#### 打开 dingyue.txt 使用 ES 文本管理器打开，并使用编辑模式，双击 url 文本，待出现复制按钮，即可复制
+
+  
+
+  
+
+* * *
+
+  
+
+![10.jpg](http://cdn.xxhat.xyz/gh/Contribuv/public@latest/usr/uploads/2022/01/2623325206.jpg#vwid=1920&vhei=1080 "10.jpg")  
+
+* * *
+
+
+![13.jpg](http://cdn.xxhat.xyz/gh/Contribuv/public@latest/usr/uploads/2022/01/664121005.png#vwid=1920&vhei=1080 "13.jpg")  
+
+####   
+
+#### 第五步：打开 V2rayNG 粘贴订阅地址
+
+  
+
+![15.jpg](http://cdn.xxhat.xyz/gh/Contribuv/public@latest/usr/uploads/2022/01/897809877.jpg#vwid=1920&vhei=1080 "15.jpg")  
+
+####   
+
+#### 如图中鼠标的位置，进行点击 并添加新的订阅
+
+  
+
+![16.jpg](http://cdn.xxhat.xyz/gh/Contribuv/public@latest/usr/uploads/2022/01/3849699360.jpg#vwid=1920&vhei=1080 "16.jpg")  
+![17.jpg](http://cdn.xxhat.xyz/gh/Contribuv/public@latest/usr/uploads/2022/01/1821002912.jpg#vwid=1920&vhei=1080 "17.jpg")  
+
+####   
+
+#### 如图所示，粘贴即可
+
+  
+
+![18.png](http://cdn.xxhat.xyz/gh/Contribuv/public@latest/usr/uploads/2022/01/1302952351.png#vwid=1920&vhei=1080 "18.png")  
+![19.jpg](http://cdn.xxhat.xyz/gh/Contribuv/public@latest/usr/uploads/2022/01/803900754.jpg#vwid=1920&vhei=1080 "19.jpg")  
+![21.jpg](http://cdn.xxhat.xyz/gh/Contribuv/public@latest/usr/uploads/2022/01/276676278.jpg#vwid=1920&vhei=1080 "21.jpg")  
+
+  
+
+#### 点击 V 按钮，即可链接，然后打开 YouTube 就能正常观看了。
+
+  
+
+![22.jpg](http://cdn.xxhat.xyz/gh/Contribuv/public@latest/usr/uploads/2022/01/148176474.jpg#vwid=1920&vhei=1080 "22.jpg")  
+![23.jpg](http://cdn.xxhat.xyz/gh/Contribuv/public@latest/usr/uploads/2022/01/3749563771.jpg#vwid=1920&vhei=1080 "23.jpg")  
+![24.png](http://cdn.xxhat.xyz/gh/Contribuv/public@latest/usr/uploads/2022/01/1099051365.png#vwid=1920&vhei=1080 "24.png")  
+![25.png](http://cdn.xxhat.xyz/gh/Contribuv/public@latest/usr/uploads/2022/01/3868084686.png#vwid=1920&vhei=1080 "25.png")  
+![26.png](http://cdn.xxhat.xyz/gh/Contribuv/public@latest/usr/uploads/2022/01/3233457848.png#vwid=1920&vhei=1080 "26.png")  
+![27.jpg](http://cdn.xxhat.xyz/gh/Contribuv/public@latest/usr/uploads/2022/01/2907284039.jpg#vwid=1920&vhei=1080 "27.jpg")  
+
+  
+
+  
+
+* * *
+
+  
+
+特别说明：奈飞无法使用，因为硬件未授权
+
+终极解决办法，购买外贸盒子链接 HDMI 即可（如果你的投影是 4K，务必购买 4K 版本的盒子）
+
+  
+
+* * *

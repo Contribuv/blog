@@ -1,13 +1,11 @@
 ---
-title: 重庆真的太热了，才4月份已经步入夏天了。
-tags: 
-  - - 夏天
+title: 神一样的打码速度，放弃python还是用java吧
 categories:
-  - - 生活
-index_img: http://cdn.jsdelivr.net/gh/Contribuv/public@latest/usr/uploads/2019/04/3478272338.jpg
-banner_img: http://cdn.jsdelivr.net/gh/Contribuv/public@latest/usr/uploads/2019/04/3478272338.jpg
-date: 2019-04-18 23:51:00
-updated: 2019-04-18 23:51:00
+  - - 记录
+index_img: http://cdn.xxhat.xyz/gh/Contribuv/public@latest/usr/uploads/2019/04/2527675222.png
+banner_img: http://cdn.xxhat.xyz/gh/Contribuv/public@latest/usr/uploads/2019/04/2527675222.png
+date: 2019-04-12 00:42:00
+updated:  2019-04-12 00:42:00
 post:
   meta:
     author:  # 作者，优先根据 front-matter 里 author 字段，其次是 hexo 配置中 author 值
@@ -27,12 +25,17 @@ post:
       format: "{} 次"
 ---
 
-今天去南滨路办事，顺便到江边玩了一会，短袖都招架不住这个天气，太热了。
+* * *
 
-顺便用才买的 坚果Pro 2S 拍一张照片
-
-![135903takys7oap8o8o710.jpg](http://cdn.jsdelivr.net/gh/Contribuv/public@latest/usr/uploads/2019/04/3478272338.jpg "135903takys7oap8o8o710.jpg")
+  
+因群控一个项目需要用到大量的自动化操作里面涉及滑块，数字英文混合码，以及XX词条库问答验证，最开始采用python，发现效率有点低，现在改用java测试，贴出一下代码  
 
 * * *
 
-坚果 Pro 2S 实际体验还是可以，准备正式采购，jd政企采购价1290，价格还行。
+![微信图片_20190411163544.png](http://cdn.xxhat.xyz/gh/Contribuv/public@latest/usr/uploads/2019/04/2527675222.png "微信图片_20190411163544.png")
+
+* * *
+
+继续折腾下一个话柄。。。。
+
+* * *
